@@ -1,5 +1,12 @@
 cc_binary(
     name = "main",
+    srcs = ["main.cpp"],
     visibility = ["//visibility:public"],
-    srcs = ["main.cpp"]
+    deps = [":print_hello"],
+)
+
+cc_library(
+    name = "print_hello",
+    srcs = ["print_hello.cpp"],
+    hdrs = ["print_hello.hpp"],
 )
