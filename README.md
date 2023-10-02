@@ -19,8 +19,9 @@ INFO: Elapsed time: 5.428s, Critical Path: 0.05s
 INFO: 3 processes: 3 internal.
 FAILED: Build did NOT complete successfully
 ```
+If you comment out the `register_toolchains` line in `MODULE.bazel`, so that it falls back to the xcode-installed tools, this target builds correctly.
 
-Note though that the included "Hello World" does build and run correctly:
+Note that even with `register_toolchains`, the included "Hello World" does build and run correctly:
 ```
 dancrosby@Dans-Mac-Studio grail-test % bazel run //src/main/cpp:main
 INFO: Invocation ID: d96df67b-3a52-4e96-b84b-6fade2bc7508
