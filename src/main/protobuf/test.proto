@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package grailtest.proto;
+
+message TestProto {
+  int32 dummy_field = 1;
+}

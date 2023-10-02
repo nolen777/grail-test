@@ -18,3 +18,5 @@ use_repo(llvm, "llvm_toolchain")
 # use_repo(llvm, "llvm_toolchain_llvm") # if you depend on specific tools in scripts
 
 register_toolchains("@llvm_toolchain//:all")
+
+bazel_dep(name = "rules_proto", version = "5.3.0-21.7")
