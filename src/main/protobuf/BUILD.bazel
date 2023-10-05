@@ -1,3 +1,5 @@
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
 proto_library(
     name = "test_proto",
     srcs = ["test.proto"],
@@ -5,5 +7,6 @@ proto_library(
 
 cc_proto_library(
     name = "test_cc_proto",
+    visibility = ["//visibility:public"],
     deps = [":test_proto"],
 )
